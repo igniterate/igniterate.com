@@ -3,7 +3,7 @@ Igniterate.com website
 Local Setup
 ===========
 
-```
+```bash
 $ git clone git@github.com:igniterate/igniterate.com.git
 $ cd igniterate.com
 $ curl -sSL https://getcomposer.org/installer | php
