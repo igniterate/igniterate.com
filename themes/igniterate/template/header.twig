@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>
+			{% if meta.title %}{{ meta.title }} — {% endif %}{{ site_title }}
+		</title>
+		{% if meta.description %}
+			<meta name="description" content="{{ meta.description|striptags }}"/>
+		{% endif %}
+		{% if meta.robots %}
+			<meta name="robots" content="{{ meta.robots }}"/>
+		{% endif %}
+
+		{% if current_page %}
+			<link rel="canonical" href="{{ current_page.url }}"/>
+		{% endif %}
+
+		<link rel="preconnect" href="https://fonts.gstatic.com"/>
+		<link
+		rel="stylesheet" href="{{ theme_url }}/assets/style.css"/>
+
+		<!-- Start of HubSpot Embed Code -->
+		<script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/9331232.js"></script>
+		<!-- End of HubSpot Embed Code -->
+		<!-- Start of Hubspot Forms Shell -->
+		<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
+		<!-- End of Hubspot Forms Shell -->
+
+	</head>
+	<body class="page-{{ current_page.id }} {% if current_page.slug %}{{ current_page.slug }}{% endif %}">
+		<div id="site">
+			<div id="site-header">
+				<div id="navbar">
+					<div class="container navbar-container">
+						<div class="branding">
+							<div class="logo">
+								<a href="{{ config.base_url }}">
+									<img src="{{ theme_url }}/assets/images/logo.svg" alt="Igniterate" width="178" height="47.47">
+								</a>
+							</div>
+						</div>
+						<div class="menu-container">
+							<button class="menu-toggle" style="display:none">
+								<span class="expand">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="arcs">
+										<line x1="3" y1="12" x2="21" y2="12"></line>
+										<line x1="3" y1="6" x2="21" y2="6"></line>
+										<line x1="3" y1="18" x2="21" y2="18"></line>
+									</svg>
+								</span>
+								<span class="close">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="arcs">
+										<line x1="18" y1="6" x2="6" y2="18"></line>
+										<line x1="6" y1="6" x2="18" y2="18"></line>
+									</svg>
+								</span>
+							</button>
+							<ul class="menu" style="display: none;">
+								<li>
+									<a href="#">Home</a>
+								</li>
+								<li>
+									<a href="#">About</a>
+								</li>
+								<li>
+									<a href="#">Solutions</a>
+								</li>
+								<li>
+									<a href="#">Application</a>
+								</li>
+								<li>
+									<a href="#">Team</a>
+								</li>
+								<li>
+									<a href="#">Free Audit</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="site-content">

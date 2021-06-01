@@ -1,0 +1,70 @@
+/**
+    Measurments
+*/
+$pad: 2rem;
+$btn-border-radius: 1.25rem;
+
+/**
+    Colors
+*/
+
+$c-bg: #000;
+$c-fg: #fff;
+$c-body: $c-fg;
+$c-meta: #999;
+
+$c-deep-red: #d10000;
+$c-red: #e81e00;
+$c-deep-orange: #ff592c;
+$c-orange: #f57f25;
+$c-deep-yellow: #eb9900;
+$c-yellow: #ffb52b;
+$c-beige: #ead8ca;
+$c-light-beige: #fbf5f1;
+$c-blue: #0060ff;
+$c-light-blue: #1199ff;
+
+$c-link: lighten($c-blue, 25%);
+$c-link-hover: darken($c-blue, 12%);
+
+
+$primary:       $c-deep-orange;
+$secondary:     $c-beige;
+
+/**
+    Grid
+*/
+
+$xl_n: 1920;
+$lg_n: 1400;
+$md_n: 1200;
+$sm_n: 768;
+$xs_n: 375;
+
+$xl: $xl_n * 1px;
+$lg: $lg_n * 1px;
+$md: $md_n * 1px;
+$sm: $sm_n * 1px;
+$xs: $xs_n * 1px;
+
+$columns: 12;
+$gutter: $pad;
+
+/**
+    Typography
+*/
+$lead: 1.5rem;
+$line-height: 1.5rem;
+
+$font-family-sans-serif:      'Roboto', Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace:       'Roboto-Mono', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-monospace;
+$font-family-brand:           $font-family-sans-serif;
+$font-size-base: 16px;
+/**
+    Animations
+*/
+$fast: 0.16s;
+$slow: 0.48s;
+
+$ease: cubic-bezier(.57,.23,1,.7);

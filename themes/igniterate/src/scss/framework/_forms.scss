@@ -1,0 +1,132 @@
+select,
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="button"],
+input[type="tel"],
+input[type="number"],
+input[type="submit"] {
+	border-radius: 0;
+	border: none;
+	margin: 0;
+	padding: .5rem .1rem;
+	display: inline-block;
+	outline: none;
+	&:focus {
+		border-bottom-color: $primary;
+	}
+}
+
+input[type="number"] {
+	padding-left: 0;
+	padding-right: 0;
+	text-align: center;
+}
+
+::placeholder {
+	color: #bbb;
+}
+
+abbr[title] {
+	color: #c30;
+	text-decoration: none;
+	border: none;
+}
+
+a.btn,
+a.button,
+button,
+input[type="button"],
+input[type="submit"] {
+	@extend .btn-font;
+	background: transparent;
+	padding: .5rem 1rem;
+	text-decoration: none;
+	background: linear-gradient(to right, $c-deep-orange 0%, $c-orange 100%);
+	border: none;
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 2rem;
+	min-width: 15.75rem;
+	&:hover {
+		background: linear-gradient(to right, $c-deep-orange 100%, $c-orange 100%);
+		// transition: all .48s ease;
+	}
+}
+
+.btn-large {
+	padding: 25px 4rem 21px;
+}
+
+.btn-secondary {
+	background: $c-meta;
+	border-bottom-color: darken($c-meta, 10%);
+	&:hover {
+		background: darken($c-meta, 10%);
+		box-shadow: 0 2px 1rem transparentize($c-meta, 0.75);
+	}
+	&:active {
+		background: darken($c-meta, 20%);
+	}
+}
+
+label {
+	font-size: .75rem;
+	color: $c-meta;
+}
+
+a.btn-large {
+	padding: 1rem 2rem;
+}
+
+label {
+	font-size: 1rem;
+	color: $c-fg;
+	margin-bottom: .5rem;
+	display: inline-block;
+}
+
+.form-container {
+	max-width: 35rem;
+	position: relative;
+	.form {
+		opacity: 1;
+	}
+	.thank-you {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		text-align: center;
+		opacity: 0;
+		z-index: -1;
+		padding: 1rem;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	&.success {
+		.form {
+			opacity: 0;
+		}
+		.thank-you {
+			opacity: 1;
+			z-index: 1;
+		}
+	}
+}
+
+.form-hubspot {
+
+	input,
+	textarea,
+	select {
+		padding: .75rem 1rem;
+		width: 100%;
+		border-radius: .25rem;
+		background: rgba(255,255,255,.1);
+		color: $c-fg;
+		margin-bottom: 1rem;
+	}
+}

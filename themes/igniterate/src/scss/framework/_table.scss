@@ -1,0 +1,12 @@
+table {
+    td, th {
+        padding: .5rem 1rem;
+        text-align: left;
+        vertical-align: top;
+        line-height: 1;
+    }
+    th {
+        display: table-cell;
+        vertical-align: top;
+    }
+}

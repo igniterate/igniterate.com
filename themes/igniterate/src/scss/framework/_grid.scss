@@ -1,0 +1,125 @@
+$grid__bp-sm: $sm_n;
+$grid__bp-md: $md_n;
+$grid__bp-lg: $lg_n;
+$grid__bp-xl: $xl_n;
+$grid__cols: 12;
+
+$map-grid-props: (
+  "": 0,
+  "-sm": $grid__bp-sm,
+  "-md": $grid__bp-md,
+  "-lg": $grid__bp-lg,
+  "-xl": $grid__bp-xl
+);
+
+@mixin create-mq($breakpoint, $min-or-max) {
+  @if ($breakpoint == 0) {
+    @content;
+  } @else {
+    @media screen and (#{$min-or-max}-width: $breakpoint *1px) {
+      @content;
+    }
+  }
+}
+
+@mixin create-col-classes($modifier, $grid-cols, $breakpoint) {
+  @include create-mq($breakpoint, "min") {
+    .col#{$modifier}-offset-0 {
+      margin-left: 0;
+    }
+    @for $i from 1 through $grid-cols {
+      .text#{$modifier}-left {text-align: left;}
+      .text#{$modifier}-right {text-align: right;}
+      .text#{$modifier}-center {text-align: center;}
+      .order#{$modifier}-#{$i} {order: $i}
+      .col#{$modifier}-#{$i} {
+        flex-basis: (100 / ($grid-cols / $i)) * 1%;
+      }
+      .offset#{$modifier}-#{$i} {
+        margin-left: (100 / ($grid-cols / $i)) * 1%;
+      }
+    }
+  }
+}
+
+@each $modifier, $breakpoint in $map-grid-props {
+  @if ($modifier == "") {
+    $modifier: "-xs";
+  }
+  @include create-mq($breakpoint - 1, "max") {
+    .h#{modifier}d,
+    .hidden#{$modifier}-down {
+      display: none !important;
+    }
+  }
+  @include create-mq($breakpoint, "min") {
+    .h#{modifier}u,
+    .hidden#{$modifier}-up {
+      display: none !important;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: $lg;
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.fluid {
+    min-width: 100%;
+    max-width: auto;
+  }
+
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  min-width: 100%;
+  margin: 0 - ($gutter / 2);
+  
+  svg,
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  [class*="col-"] {
+    padding-left: $gutter / 2;
+    padding-right: $gutter / 2;
+  }
+
+  &.v-center {
+    align-items: center;
+  }
+}
+
+.row-no-pad {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 0;
+  margin-left: 0;
+
+  [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@each $modifier, $breakpoint in $map-grid-props {
+  @include create-col-classes($modifier, $grid__cols, $breakpoint);
+}
+
+.mh {
+  @media screen and (max-width: $grid__bp-md * 1px) {
+    display: none;
+  }
+}

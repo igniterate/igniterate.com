@@ -1,0 +1,60 @@
+body.page-index {
+    #site-content {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .banner {
+        .message {
+            margin: 5rem 0 3rem;
+        }
+        .cta {
+            margin: 3rem 0 5rem;
+        }
+        .media {
+            margin: 5rem 0;
+        }
+
+        svg {
+            .carry,
+            .coin,
+            .packet,
+            .cart {
+                opacity: 0;
+                transition: opacity .2s ease;
+            }
+            overflow: visible;
+        }
+
+        @include md {
+            svg {
+                max-width: 100%;
+                height: auto;
+                overflow: visible;
+                .carry,
+                .coin,
+                .packet,
+                .cart {
+                    opacity: 1;
+                    transition: opacity .2s ease;
+                }
+                .carry-arrow {
+                    animation: updown 1s infinite;
+                }
+            }
+        }
+    }
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-32px);
+    }
+    99% {
+        transform: translateY(0);
+    }
+}

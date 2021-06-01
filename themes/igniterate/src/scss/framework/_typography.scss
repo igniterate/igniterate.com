@@ -1,0 +1,128 @@
+html,
+body {
+    font-family: $font-family-base;
+    line-height: 1.5;
+    font-size: $font-size-base;
+    font-weight: 400;
+    color: $c-body;
+}
+
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6 {
+    a {
+        color: inherit;
+        text-decoration: inherit;
+        &:hover {
+            text-decoration: underline;
+            color: $c-link-hover;
+        }
+    }
+}
+
+p, ul, ol {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+-webkit-link {
+    color: $c-link;
+}
+
+h1, .h1 {
+    font-weight: normal;
+    font-size: 3rem;
+    line-height: 4rem;
+    @include md {
+
+    }
+}
+
+h2, .h2 {
+    font-weight: normal;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    @include md {
+
+    }
+}
+
+h3, .h3 {
+    font-size: 2rem;
+    line-height: 4rem;
+    @include md {
+
+    }
+}
+
+h4, .h4 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+    @include md {
+
+    }
+}
+
+h5, .h5 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    @include md {
+
+    }
+}
+
+h6, .h6 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    @include md {
+        
+    }
+}
+
+.btn-font {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+
+a {
+    color: $c-link;
+    transition: color .48s ease;
+    &:active {
+        transition: color .48s ease;
+        color: darken($c-link, 12%);
+    }
+    &:hover {
+        color: $c-link-hover;
+        transition: color .48s ease;
+    }
+}
+
+#site-header,
+#site-footer {
+    h1,h2,h3 {
+        margin: 0;
+    }
+}
+
+hr {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: rgba(255,255,255,.1);
+    border: none;
+}

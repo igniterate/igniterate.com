@@ -1,0 +1,11 @@
+.hbspt-form {
+    .hubspot-link__container.sproket {
+        display: none !important;
+        opacity: 0;
+        position: absolute;
+    }
+    .hs-input {
+        border: none;
+        background: none;
+    }
+}

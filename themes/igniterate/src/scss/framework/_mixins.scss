@@ -1,0 +1,60 @@
+@mixin clearfix() {
+  &:before,
+  &:after {
+    display: table; // 2
+    content: " "; // 1
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin list-inline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+}
+
+/**
+  Media queries
+  */
+@mixin sm {
+  @media (min-width: #{$sm}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$md}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$lg}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$xl}) {
+    @content;
+  }
+}
+
+// Custom
+@mixin rwd-from($var) {
+  @media (min-width: #{$var}) {
+    @content;
+  }
+}
+
+@mixin rwd-to($var) {
+  @media (max-width: #{$var}) {
+    @content;
+  }
+}
