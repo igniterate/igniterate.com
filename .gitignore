@@ -24,3 +24,5 @@ desktop.ini
 # phpDocumentor
 /.build/phpdoc
 /.build/phpdoc.cache
+
+node_modules
