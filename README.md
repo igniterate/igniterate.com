@@ -1,4 +1,4 @@
-Igniterate.com website
+igniterate.com website
 
 Local Setup
 ===========
