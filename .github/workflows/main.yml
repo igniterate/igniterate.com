@@ -31,8 +31,5 @@ jobs:
           
       - name: Deploy new code
         run: | 
-          sudo apt install -y openssh-client
           ssh ${{ secrets.DEPLOY_USER }}@${{ secrets.SITE_IP }}
-          cd /var/www/html/igniterate.com
-          sudo git pull
-          sudo chown -R www-data:www-data /var/www/html/igniterate.com
+          /bin/bash ~/deploy.sh
