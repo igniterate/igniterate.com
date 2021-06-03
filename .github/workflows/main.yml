@@ -31,7 +31,7 @@ jobs:
           
       - name: Deploy new code
         run: | 
-          apt install -y openssh-client
+          sudo apt install -y openssh-client
           ssh admin@${{ secrets.SITE_IP }}
           cd /var/www/html/igniterate.com
           sudo git pull
