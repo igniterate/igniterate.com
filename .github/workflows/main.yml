@@ -26,13 +26,14 @@ jobs:
           key: ${{ secrets.DEPLOY_KEY }}
           name: github-actions
           known_hosts: 'some stuff'
+          if_key_exists: fail
       - name: Get ssh known hosts
         run: ssh-keyscan -H ${{ secrets.SITE_IP }} >> ~/.ssh/known_hosts
           
       - name: Deploy new code
         run: | 
           sudo apt install -y openssh-client
-          ssh admin@${{ secrets.SITE_IP }}
+          ssh ${{ secrets.DEPLOY_USER }}@${{ secrets.SITE_IP }}
           cd /var/www/html/igniterate.com
           sudo git pull
           sudo chown -R www-data:www-data /var/www/html/igniterate.com
