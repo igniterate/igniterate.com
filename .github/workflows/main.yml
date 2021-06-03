@@ -30,6 +30,4 @@ jobs:
         run: ssh-keyscan -H ${{ secrets.SITE_IP }} >> ~/.ssh/known_hosts
           
       - name: Deploy new code
-        run: | 
-          ssh ${{ secrets.DEPLOY_USER }}@${{ secrets.SITE_IP }}
-          /bin/bash ~/deploy.sh
+        run: ssh ${{ secrets.DEPLOY_USER }}@${{ secrets.SITE_IP }} 'cd /var/www/html/igniterate.com;sudo git stash; sudo git pull; sudo chown -R www-data:www-data /var/www/html/igniterate.com'
