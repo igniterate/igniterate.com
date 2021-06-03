@@ -24,8 +24,7 @@ jobs:
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.DEPLOY_KEY }}
-          name: github-actions
-          known_hosts: 'some stuff'
+          known_hosts: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
           if_key_exists: fail
       - name: Get ssh known hosts
         run: ssh-keyscan -H ${{ secrets.SITE_IP }} >> ~/.ssh/known_hosts
