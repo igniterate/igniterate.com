@@ -1,5 +1,5 @@
 ---
-Title: Welcome
+Title: Social Impact eCommerce
 Description: Set your business on fire! In a good way
 Slug: home
 ---
