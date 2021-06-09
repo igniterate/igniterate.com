@@ -26,17 +26,10 @@
         "source": "https://github.com/picocms/Pico"
     },
     "require": {
-        "php": ">=5.3.6",
-        "ext-mbstring": "*",
-        "twig/twig": "^1.36",
-        "symfony/yaml" : "^2.8",
-        "erusev/parsedown": "1.8.0-beta-7",
-        "erusev/parsedown-extra": "0.8.0-beta-1"
-    },
-    "suggest": {
-        "picocms/pico-theme": "Pico requires a theme to actually display the contents of your website. This is Pico's official default theme.",
-        "picocms/pico-deprecated": "PicoDeprecated's purpose is to maintain backward compatibility to older versions of Pico.",
-        "picocms/composer-installer": "This Composer plugin is responsible for installing Pico plugins and themes using the Composer package manager."
+        "picocms/pico": "^2.1",
+        "picocms/pico-theme": "^2.1",
+        "picocms/pico-deprecated": "^2.1",
+        "picocms/composer-installer": "^1.0"
     },
     "minimum-stability": "beta",
     "prefer-stable": true
