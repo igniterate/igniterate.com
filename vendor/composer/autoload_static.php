@@ -20,6 +20,10 @@ class ComposerStaticInitf0837843acf5df743491031e862eecb9
             'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Component\\Yaml\\' => 23,
         ),
+        'P' => 
+        array (
+            'Pico\\Composer\\' => 14,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -35,6 +39,10 @@ class ComposerStaticInitf0837843acf5df743491031e862eecb9
         array (
             0 => __DIR__ . '/..' . '/symfony/yaml',
         ),
+        'Pico\\Composer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/picocms/composer-installer/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -49,11 +57,11 @@ class ComposerStaticInitf0837843acf5df743491031e862eecb9
         array (
             'PicoPluginInterface' => 
             array (
-                0 => __DIR__ . '/../..' . '/lib',
+                0 => __DIR__ . '/..' . '/picocms/pico/lib',
             ),
             'Pico' => 
             array (
-                0 => __DIR__ . '/../..' . '/lib',
+                0 => __DIR__ . '/..' . '/picocms/pico/lib',
             ),
             'ParsedownExtra' => 
             array (
@@ -68,14 +76,25 @@ class ComposerStaticInitf0837843acf5df743491031e862eecb9
         array (
             'AbstractPicoPlugin' => 
             array (
-                0 => __DIR__ . '/../..' . '/lib',
+                0 => __DIR__ . '/..' . '/picocms/pico/lib',
             ),
         ),
     );
 
     public static $classMap = array (
+        'AbstractPicoCompatPlugin' => __DIR__ . '/../..' . '/plugins/PicoDeprecated/lib/AbstractPicoCompatPlugin.php',
+        'AbstractPicoPluginApiCompatPlugin' => __DIR__ . '/../..' . '/plugins/PicoDeprecated/lib/AbstractPicoPluginApiCompatPlugin.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'PicoRobots' => __DIR__ . '/..' . '/phrozenbyte/pico-robots/PicoRobots.php',
+        'PicoCompatPluginInterface' => __DIR__ . '/../..' . '/plugins/PicoDeprecated/lib/PicoCompatPluginInterface.php',
+        'PicoDeprecated' => __DIR__ . '/../..' . '/plugins/PicoDeprecated/PicoDeprecated.php',
+        'PicoMainCompatPlugin' => __DIR__ . '/../..' . '/plugins/PicoDeprecated/plugins/PicoMainCompatPlugin.php',
+        'PicoPluginApi0CompatPlugin' => __DIR__ . '/../..' . '/plugins/PicoDeprecated/plugins/PicoPluginApi0CompatPlugin.php',
+        'PicoPluginApi1CompatPlugin' => __DIR__ . '/../..' . '/plugins/PicoDeprecated/plugins/PicoPluginApi1CompatPlugin.php',
+        'PicoPluginApi2CompatPlugin' => __DIR__ . '/../..' . '/plugins/PicoDeprecated/plugins/PicoPluginApi2CompatPlugin.php',
+        'PicoPluginApiCompatPluginInterface' => __DIR__ . '/../..' . '/plugins/PicoDeprecated/lib/PicoPluginApiCompatPluginInterface.php',
+        'PicoThemeApi0CompatPlugin' => __DIR__ . '/../..' . '/plugins/PicoDeprecated/plugins/PicoThemeApi0CompatPlugin.php',
+        'PicoThemeApi1CompatPlugin' => __DIR__ . '/../..' . '/plugins/PicoDeprecated/plugins/PicoThemeApi1CompatPlugin.php',
+        'PicoThemeApi2CompatPlugin' => __DIR__ . '/../..' . '/plugins/PicoDeprecated/plugins/PicoThemeApi2CompatPlugin.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

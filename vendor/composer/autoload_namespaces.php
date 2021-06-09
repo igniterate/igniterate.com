@@ -7,9 +7,9 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
-    'PicoPluginInterface' => array($baseDir . '/lib'),
-    'Pico' => array($baseDir . '/lib'),
+    'PicoPluginInterface' => array($vendorDir . '/picocms/pico/lib'),
+    'Pico' => array($vendorDir . '/picocms/pico/lib'),
     'ParsedownExtra' => array($vendorDir . '/erusev/parsedown-extra'),
     'Parsedown' => array($vendorDir . '/erusev/parsedown'),
-    'AbstractPicoPlugin' => array($baseDir . '/lib'),
+    'AbstractPicoPlugin' => array($vendorDir . '/picocms/pico/lib'),
 );

@@ -47,10 +47,6 @@
                 "markdown",
                 "parser"
             ],
-            "support": {
-                "issues": "https://github.com/erusev/parsedown/issues",
-                "source": "https://github.com/erusev/parsedown/tree/1.8.0-beta-7"
-            },
             "install-path": "../erusev/parsedown"
         },
         {
@@ -104,36 +100,194 @@
                 "parsedown",
                 "parser"
             ],
-            "support": {
-                "issues": "https://github.com/erusev/parsedown-extra/issues",
-                "source": "https://github.com/erusev/parsedown-extra/tree/master"
-            },
             "install-path": "../erusev/parsedown-extra"
         },
         {
-            "name": "phrozenbyte/pico-robots",
-            "version": "v1.0.0",
-            "version_normalized": "1.0.0.0",
+            "name": "picocms/composer-installer",
+            "version": "v1.0.1",
+            "version_normalized": "1.0.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/PhrozenByte/pico-robots.git",
-                "reference": "f3a9b53aa7e64844e1d7ed80509ab27195f5ae33"
+                "url": "https://github.com/picocms/composer-installer.git",
+                "reference": "6b5036c83aa091ed76e2a76ed9335885f95a7db7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhrozenByte/pico-robots/zipball/f3a9b53aa7e64844e1d7ed80509ab27195f5ae33",
-                "reference": "f3a9b53aa7e64844e1d7ed80509ab27195f5ae33",
+                "url": "https://api.github.com/repos/picocms/composer-installer/zipball/6b5036c83aa091ed76e2a76ed9335885f95a7db7",
+                "reference": "6b5036c83aa091ed76e2a76ed9335885f95a7db7",
+                "shasum": ""
+            },
+            "time": "2019-11-24T22:50:47+00:00",
+            "type": "composer-installer",
+            "extra": {
+                "class": "Pico\\Composer\\Installer\\PluginInstaller"
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Pico\\Composer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Rudolf",
+                    "email": "picocms.org@daniel-rudolf.de",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "The Pico Community",
+                    "homepage": "http://picocms.org/"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/picocms/composer-installer/graphs/contributors"
+                }
+            ],
+            "description": "A composer plugin responsible for installing plugins and themes for Pico, a stupidly simple, blazing fast, flat file CMS.",
+            "homepage": "http://picocms.org/",
+            "keywords": [
+                "composer",
+                "composer-installer",
+                "composer-plugin",
+                "pico",
+                "pico-cms",
+                "picocms",
+                "picocms-installer",
+                "picocms-plugin",
+                "picocms-theme"
+            ],
+            "install-path": "../picocms/composer-installer"
+        },
+        {
+            "name": "picocms/pico",
+            "version": "v2.1.4",
+            "version_normalized": "2.1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/picocms/Pico.git",
+                "reference": "7228129cade3f812f22904b503c939b04a75c9dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/picocms/Pico/zipball/7228129cade3f812f22904b503c939b04a75c9dd",
+                "reference": "7228129cade3f812f22904b503c939b04a75c9dd",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "erusev/parsedown": "1.8.0-beta-7",
+                "erusev/parsedown-extra": "0.8.0-beta-1",
+                "ext-mbstring": "*",
+                "php": ">=5.3.6",
+                "symfony/yaml": "^2.8",
+                "twig/twig": "^1.36"
             },
-            "time": "2017-11-27T21:38:06+00:00",
+            "suggest": {
+                "picocms/composer-installer": "This Composer plugin is responsible for installing Pico plugins and themes using the Composer package manager.",
+                "picocms/pico-deprecated": "PicoDeprecated's purpose is to maintain backward compatibility to older versions of Pico.",
+                "picocms/pico-theme": "Pico requires a theme to actually display the contents of your website. This is Pico's official default theme."
+            },
+            "time": "2020-08-29T14:15:52+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1.x-dev",
+                    "dev-pico-3.0": "3.0.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "Pico": "lib/",
+                    "PicoPluginInterface": "lib/",
+                    "AbstractPicoPlugin": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gilbert Pellegrom",
+                    "email": "gilbert@pellegrom.me",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Daniel Rudolf",
+                    "email": "picocms.org@daniel-rudolf.de",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "The Pico Community",
+                    "homepage": "http://picocms.org/"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/picocms/Pico/graphs/contributors"
+                }
+            ],
+            "description": "Pico is a flat file CMS, this means there is no administration backend and database to deal with. You simply create .md files in the \"content\" folder and that becomes a page.",
+            "homepage": "http://picocms.org/",
+            "keywords": [
+                "Simple",
+                "cms",
+                "content-management",
+                "flat-file",
+                "markdown",
+                "markdown-to-html",
+                "php",
+                "pico",
+                "pico-cms",
+                "picocms",
+                "twig",
+                "website",
+                "yaml"
+            ],
+            "funding": [
+                {
+                    "url": "https://www.bountysource.com/teams/picocms",
+                    "type": "custom"
+                }
+            ],
+            "install-path": "../picocms/pico"
+        },
+        {
+            "name": "picocms/pico-deprecated",
+            "version": "v2.1.4",
+            "version_normalized": "2.1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/picocms/pico-deprecated.git",
+                "reference": "8d1a4056ecc71cc2857e91d50bcb38db91d424e0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/picocms/pico-deprecated/zipball/8d1a4056ecc71cc2857e91d50bcb38db91d424e0",
+                "reference": "8d1a4056ecc71cc2857e91d50bcb38db91d424e0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "picocms/pico": "self.version"
+            },
+            "time": "2020-08-29T15:11:07+00:00",
             "type": "pico-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1.x-dev",
+                    "dev-pico-3.0": "3.0.x-dev"
+                }
+            },
             "installation-source": "dist",
             "autoload": {
                 "classmap": [
-                    "PicoRobots.php"
+                    "PicoDeprecated.php",
+                    "lib/",
+                    "plugins/"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -143,32 +297,87 @@
             "authors": [
                 {
                     "name": "Daniel Rudolf",
-                    "homepage": "http://daniel-rudolf.de/",
+                    "email": "picocms.org@daniel-rudolf.de",
                     "role": "Lead Developer"
                 },
                 {
+                    "name": "The Pico Community",
+                    "homepage": "http://picocms.org/"
+                },
+                {
                     "name": "Contributors",
-                    "homepage": "https://github.com/PhrozenByte/pico-robots/graphs/contributors"
+                    "homepage": "https://github.com/picocms/pico-deprecated/graphs/contributors"
                 }
             ],
-            "description": "This is Pico's official robots plugin to add a robots.txt and sitemap.xml to your website. Pico is a stupidly simple, blazing fast, flat file CMS.",
+            "description": "This is Pico's official PicoDeprecated plugin. Pico is a stupidly simple, blazing fast, flat file CMS.",
             "homepage": "http://picocms.org/",
             "keywords": [
-                "Sitemap",
+                "compatibility",
+                "deprecation",
                 "pico",
-                "pico-robots",
+                "pico-deprecated",
                 "picocms",
-                "picocms-plugin",
-                "robots",
-                "robots-txt",
-                "sitemap-xml"
+                "picocms-plugin"
             ],
-            "support": {
-                "docs": "http://picocms.org/docs/pico-robots/",
-                "issues": "https://github.com/PhrozenByte/pico-robots/issues",
-                "source": "https://github.com/PhrozenByte/pico-robots"
+            "install-path": "../../plugins/PicoDeprecated"
+        },
+        {
+            "name": "picocms/pico-theme",
+            "version": "v2.1.4",
+            "version_normalized": "2.1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/picocms/pico-theme.git",
+                "reference": "d4ec8df28356f1e034a97d37327b9aecb3129eed"
             },
-            "install-path": "../phrozenbyte/pico-robots"
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/picocms/pico-theme/zipball/d4ec8df28356f1e034a97d37327b9aecb3129eed",
+                "reference": "d4ec8df28356f1e034a97d37327b9aecb3129eed",
+                "shasum": ""
+            },
+            "require": {
+                "picocms/pico": "self.version"
+            },
+            "time": "2020-08-29T15:11:43+00:00",
+            "type": "pico-theme",
+            "extra": {
+                "installer-name": "default",
+                "branch-alias": {
+                    "dev-master": "2.1.x-dev",
+                    "dev-pico-3.0": "3.0.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Rudolf",
+                    "email": "picocms.org@daniel-rudolf.de",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "The Pico Community",
+                    "homepage": "http://picocms.org/"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/picocms/pico-theme/graphs/contributors"
+                }
+            ],
+            "description": "This is Pico's official default theme. Pico is a stupidly simple, blazing fast, flat file CMS.",
+            "homepage": "http://picocms.org/",
+            "keywords": [
+                "default-theme",
+                "pico",
+                "pico-theme",
+                "picocms",
+                "picocms-theme"
+            ],
+            "install-path": "../../themes/default"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -303,9 +512,6 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/yaml/tree/v2.8.52"
-            },
             "install-path": "../symfony/yaml"
         },
         {
