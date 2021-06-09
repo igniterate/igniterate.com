@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '323bf9e421bc989dcf874757a25d01293b24c591',
+        'reference' => '69ce9e7d5bb7a09aa6d03fb4dcdf10d70b6f289a',
         'name' => 'picocms/pico-composer',
         'dev' => true,
     ),
@@ -52,7 +52,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '323bf9e421bc989dcf874757a25d01293b24c591',
+            'reference' => '69ce9e7d5bb7a09aa6d03fb4dcdf10d70b6f289a',
             'dev_requirement' => false,
         ),
         'picocms/pico-deprecated' => array(
