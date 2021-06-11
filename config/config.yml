@@ -53,7 +53,7 @@ assets_url: ~                       # Pico will try to guess the URL to the asse
 plugins_url: ~                      # Pico will try to guess the URL to the plugins dir of your installation;
                                     #     If this fails, override it here. Example: https://example.com/pico/plugins/
 DummyPlugin.enabled: false          # Force the plugin "DummyPlugin" to be disabled
-
+PicoOpenGraph.enabled: true
 ##
 # Custom
 #
